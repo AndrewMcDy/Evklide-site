@@ -37,7 +37,7 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #ff9900;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
   @media (max-width: 520px) {
     padding: 16px 28px;
     font-size: 12px;
@@ -65,6 +65,7 @@ body {
       margin: 0 20px 0 0;
       width: 30px;
       height: 23px;
+      overflow: hidden;
       cursor: pointer;
       & span,
       &::before,
@@ -74,7 +75,7 @@ body {
         height: 3px;
         width: 100%;
         background-color: #333;
-        transition: all 0.8s ease 0s;
+        transition: all 0.3s ease 0s;
       }
       &::before,
       &::after {
@@ -99,9 +100,9 @@ body {
         height: 33px;
         border: 2px solid #ff9900;
       }
-      &._active {
-        overflow: hidden;
-      }
+      // &._active {
+      //   overflow: hidden;
+      // }
       &._active span,
       &._active::before,
       &._active::after {
@@ -182,9 +183,15 @@ body {
   &__list {
     display: flex;
     align-items: center;
-    gap: 75px;
+    gap: 85px;
     @media (max-width: 1300px) {
       gap: 40px;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+    & li {
+      position: relative;
     }
   }
 
@@ -194,23 +201,30 @@ body {
     font-size: 18px;
     line-height: 22px;
     color: #333333;
-    padding: 7px 5px;
-    border: 2px solid #ffffff;
-    transition: all 0.8s ease 0s;
-    @media (max-width: 1024px) {
-      border: 2px solid #000;
-    }
-    @media (min-width: 1024px) {
-      &:hover {
-        border-bottom: 2px solid #ff9900;
+    padding: 3px;
+    transition: all 0.3s ease 0s;
+    @media (min-width: 1025px) {
+      &:hover::before,
+      &:active::before,
+      &._active::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff9900;
+        transform: translateY(4px);
       }
       &:focus {
-        padding: 5px;
-        border: 2px solid #ff9900;
+        outline: 2px solid #ff9900;
       }
-      &._active {
+      &._active,
+      &:active {
         color: #e1670e;
-        border-bottom: 2px solid #e1670e;
+        &::before {
+          background-color: #e1670e;
+        }
       }
     }
   }
@@ -241,7 +255,7 @@ body {
     height: 24px;
     width: 24px;
     border: 2px solid #ffffff;
-    transition: all 0.8s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 }
 
@@ -460,7 +474,7 @@ body {
     color: #ffffff;
     padding: 20px 38px;
     border: 3px solid #ff9900;
-    transition: all 0.8s ease 0s;
+    transition: all 0.3s ease 0s;
     &:hover,
     &:focus {
       background-color: #ff9900;
@@ -589,7 +603,7 @@ body {
     background-color: #ffffff;
     margin-bottom: 45px;
     padding: 3px;
-    transition: all 0.8s ease 0s;
+    transition: all 0.3s ease 0s;
     &:hover {
       color: #ff9900;
     }
@@ -670,7 +684,7 @@ body {
     text-align: center;
     color: #ffffff;
     padding: 20px 38px;
-    transition: all 0.8s ease;
+    transition: all 0.3s ease;
     background-color: #ff9900;
     &:hover,
     &:focus {
@@ -780,7 +794,7 @@ body {
     width: 50px;
     border-radius: 50%;
     background-color: #ececec;
-    transition: transform 0.8s ease-out;
+    transition: transform 0.3s ease-out;
     &::before,
     &::after {
       content: "";
@@ -812,7 +826,7 @@ body {
     opacity: 0;
     overflow: hidden;
     will-change: max-height;
-    transition: all 0.8s ease-out;
+    transition: all 0.3s ease-out;
     box-sizing: content-box;
     @media (max-width: 768px) {
       font-size: 14px;
@@ -915,7 +929,7 @@ body {
     width: 60px;
     height: 60px;
     fill: #7c7c7c;
-    transition: all 0.8s ease 0s;
+    transition: all 0.3s ease 0s;
     &:hover {
       fill: #ff9900;
       cursor: pointer;
