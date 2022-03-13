@@ -291,15 +291,15 @@ body {
   }
 
   &__wraper-1 {
-    background: url(/img/slider1.jpg) 0 0 / auto 100% no-repeat;
+    background: url(../img/slider1.jpg) 0 0 / auto 100% no-repeat;
   }
 
   &__wraper-2 {
-    background: url(/img/slider2.jpg) 0 0 / auto 100% no-repeat;
+    background: url(../img/slider2.jpg) 0 0 / auto 100% no-repeat;
   }
 
   &__wraper-3 {
-    background: url(/img/slider3.jpg) 0 0 / auto 100% no-repeat;
+    background: url(../img/slider3.jpg) 0 0 / auto 100% no-repeat;
   }
 
   &__main-area {
@@ -419,9 +419,9 @@ body {
 
   &__img {
     height: 100%;
-    background: url(/img/about1.jpg) center / cover no-repeat;
+    background: url(../img/about1.jpg) center / cover no-repeat;
     @media (max-width: 1350px) {
-      background: url(/img/about1.jpg) center / cover no-repeat;
+      background: url(../img/about1.jpg) center / cover no-repeat;
     }
     @media (max-width: 768px) {
       height: 290px;

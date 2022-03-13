@@ -361,15 +361,15 @@ body._lock {
 }
 
 .hero__wraper-1 {
-  background: url(/img/slider1.jpg) 0 0/auto 100% no-repeat;
+  background: url(../img/slider1.jpg) 0 0/auto 100% no-repeat;
 }
 
 .hero__wraper-2 {
-  background: url(/img/slider2.jpg) 0 0/auto 100% no-repeat;
+  background: url(../img/slider2.jpg) 0 0/auto 100% no-repeat;
 }
 
 .hero__wraper-3 {
-  background: url(/img/slider3.jpg) 0 0/auto 100% no-repeat;
+  background: url(../img/slider3.jpg) 0 0/auto 100% no-repeat;
 }
 
 .hero__main-area {
@@ -552,12 +552,12 @@ body._lock {
 
 .about__img {
   height: 100%;
-  background: url(/img/about1.jpg) center/cover no-repeat;
+  background: url(../img/about1.jpg) center/cover no-repeat;
 }
 
 @media (max-width: 1350px) {
   .about__img {
-    background: url(/img/about1.jpg) center/cover no-repeat;
+    background: url(../img/about1.jpg) center/cover no-repeat;
   }
 }
 
